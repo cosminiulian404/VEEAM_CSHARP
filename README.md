@@ -8,4 +8,4 @@ As it can be seen, it uses miliseconds for the time to update and copy, it can b
 
 Unfortunatly the logger is buggy and I need to spend more time in orde to improve it, move it to another class, and general code readability maintanance.
 
-It was an excellent test, and really made me scour the microsoft documentation for the information i needed, and some sites i wouldn't find otherwise like https://www.dotnetperls.com/ .
+It was an excellent test, and really made me scour the microsoft documentation for the information i needed, and some sites i wouldn't have found otherwise like https://www.dotnetperls.com/ .
