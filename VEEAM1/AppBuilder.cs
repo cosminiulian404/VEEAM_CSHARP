@@ -24,12 +24,12 @@ namespace VEEAM1
         {
 
             _aTimer.Elapsed += OnTimeEvent;
-
+            
             _aTimer.AutoReset = true;
             _aTimer.Enabled = true;
             _aTimer.Start();
             Console.ReadLine();
-
+            
         }
 
         private void OnTimeEvent(object? sender, ElapsedEventArgs e)
@@ -79,6 +79,6 @@ namespace VEEAM1
             }
         }
 
-
+        
     }
 }

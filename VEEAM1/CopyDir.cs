@@ -1,4 +1,10 @@
-﻿namespace VEEAM1
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VEEAM1
 {
     public class CopyDir
     {
@@ -6,6 +12,7 @@
         private static DirectoryInfo? _target;
         public static List<string> _coppyedFiles = new List<string>();
         public static List<string> _removedFiles = new List<string>();
+
 
         public CopyDir(string source, string target)
         {
