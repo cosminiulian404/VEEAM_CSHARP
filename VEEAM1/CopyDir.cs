@@ -10,18 +10,34 @@ namespace VEEAM1
     {
         private static DirectoryInfo? _source;
         private static DirectoryInfo? _target;
+<<<<<<< HEAD
         private string _loggerPath;
         public CopyDir(string source, string target, string loggerPath)
+=======
+        public static List<string> _coppyedFiles = new List<string>();
+        public static List<string> _removedFiles = new List<string>();
+
+
+        public CopyDir(string source, string target)
+>>>>>>> 6fd095866cc8eb1ffcf63f8e2311b39c6e7dedb0
         {
             _loggerPath = loggerPath;
             _source = new DirectoryInfo(source);
             _target = new DirectoryInfo(target);
             CopyAll(_source, _target);
+<<<<<<< HEAD
             CompareFiles(_source, _target);
 
         }
 
 
+=======
+
+        }
+
+        public List<string> CoppyedFiles
+        { get { return _coppyedFiles; } }
+>>>>>>> 6fd095866cc8eb1ffcf63f8e2311b39c6e7dedb0
 
 
         public void CopyAll(DirectoryInfo source, DirectoryInfo target)
@@ -34,7 +50,10 @@ namespace VEEAM1
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fd095866cc8eb1ffcf63f8e2311b39c6e7dedb0
             // Check if the target directory exists, if not, create it.
             if (Directory.Exists(target.FullName) == false)
             {
@@ -45,6 +64,12 @@ namespace VEEAM1
             // Copy each file into it's new directory.
             foreach (FileInfo fi in source.GetFiles())
             {
+<<<<<<< HEAD
+=======
+
+                _coppyedFiles.Add(target.FullName + "\\" + fi.Name);
+
+>>>>>>> 6fd095866cc8eb1ffcf63f8e2311b39c6e7dedb0
                 fi.CopyTo(Path.Combine(target.ToString(), fi.Name), true);
             }
 
@@ -103,6 +128,10 @@ namespace VEEAM1
             }
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6fd095866cc8eb1ffcf63f8e2311b39c6e7dedb0
     }
 
 
